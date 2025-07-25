@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include <vector>
-#include <map>  // 新增：包含map头文件
+#include <map>  
 
 USING_NS_CC;
 
@@ -32,7 +32,7 @@ private:
     Sprite* _undoButton; // 回退按钮
     std::map<Sprite*, Vec2> _originalPositions; // 存储精灵移动前的位置
     std::vector<std::pair<Sprite*, Vec2>> _moveHistory; // 移动操作历史栈
-    int _currentMaxZOrder; // 新增：跟踪当前最大层级值
+    int _currentMaxZOrder; // 当前最大层级值
     void createUndoButton(); // 创建回退按钮
     void onUndoButtonClicked(Ref* pSender); // 回退按钮点击事件处理
 };
